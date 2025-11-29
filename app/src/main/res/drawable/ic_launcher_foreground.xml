@@ -1,60 +1,146 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
 
-    <!-- Clock Circle -->
+    <!-- Concentric circles (purple) -->
+    <path
+        android:pathData="M54,20C34.67,20 19,35.67 19,55C19,74.33 34.67,90 54,90C73.33,90 89,74.33 89,55C89,35.67 73.33,20 54,20Z"
+        android:strokeWidth="0.5"
+        android:strokeColor="#8B5CF6"
+        android:fillColor="#00000000"/>
+
+    <path
+        android:pathData="M54,22C35.78,22 21,36.78 21,55C21,73.22 35.78,88 54,88C72.22,88 87,73.22 87,55C87,36.78 72.22,22 54,22Z"
+        android:strokeWidth="0.5"
+        android:strokeColor="#8B5CF6"
+        android:fillColor="#00000000"/>
+
+    <path
+        android:pathData="M54,24C36.88,24 23,37.88 23,55C23,72.12 36.88,86 54,86C71.12,86 85,72.12 85,55C85,37.88 71.12,24 54,24Z"
+        android:strokeWidth="0.5"
+        android:strokeColor="#8B5CF6"
+        android:fillColor="#00000000"/>
+
+    <path
+        android:pathData="M54,26C37.98,26 25,38.98 25,55C25,71.02 37.98,84 54,84C70.02,84 83,71.02 83,55C83,38.98 70.02,26 54,26Z"
+        android:strokeWidth="0.5"
+        android:strokeColor="#8B5CF6"
+        android:fillColor="#00000000"/>
+
+    <path
+        android:pathData="M54,28C39.09,28 27,40.09 27,55C27,69.91 39.09,82 54,82C68.91,82 81,69.91 81,55C81,40.09 68.91,28 54,28Z"
+        android:strokeWidth="0.5"
+        android:strokeColor="#8B5CF6"
+        android:fillColor="#00000000"/>
+
+    <!-- Main gradient circle border -->
+    <path
+        android:pathData="M54,30C40.19,30 29,41.19 29,55C29,68.81 40.19,80 54,80C67.81,80 79,68.81 79,55C79,41.19 67.81,30 54,30Z"
+        android:strokeWidth="3"
+        android:fillColor="#00000000">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:type="sweep"
+                android:centerX="54"
+                android:centerY="55"
+                android:startColor="#10B981"
+                android:endColor="#10B981">
+                <item android:offset="0.0" android:color="#10B981"/>
+                <item android:offset="0.15" android:color="#8B5CF6"/>
+                <item android:offset="0.5" android:color="#EC4899"/>
+                <item android:offset="0.85" android:color="#8B5CF6"/>
+                <item android:offset="1.0" android:color="#10B981"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Clock face (dark circle) -->
+    <path
+        android:fillColor="#0F0D1A"
+        android:pathData="M54,33C41.85,33 32,42.85 32,55C32,67.15 41.85,77 54,77C66.15,77 76,67.15 76,55C76,42.85 66.15,33 54,33Z"/>
+
+    <!-- Hour markers (12 positions) -->
+    <!-- 12 o'clock -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M54,24C39.64,24 28,35.64 28,50C28,64.36 39.64,76 54,76C68.36,76 80,64.36 80,50C80,35.64 68.36,24 54,24ZM54,72C41.85,72 32,62.15 32,50C32,37.85 41.85,28 54,28C66.15,28 76,37.85 76,50C76,62.15 66.15,72 54,72Z"/>
+        android:pathData="M53,37h2v3h-2z"/>
+    <!-- 1 o'clock -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M61.5,39.5h1.5v1.5h-1.5z"/>
+    <!-- 2 o'clock -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M67.5,45h1.5v1.5h-1.5z"/>
+    <!-- 3 o'clock -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M68,54h3v2h-3z"/>
+    <!-- 4 o'clock -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M67.5,63h1.5v1.5h-1.5z"/>
+    <!-- 5 o'clock -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M61.5,68.5h1.5v1.5h-1.5z"/>
+    <!-- 6 o'clock -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M53,70h2v3h-2z"/>
+    <!-- 7 o'clock -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M45,68.5h1.5v1.5h-1.5z"/>
+    <!-- 8 o'clock -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M39,63h1.5v1.5h-1.5z"/>
+    <!-- 9 o'clock -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M37,54h3v2h-3z"/>
+    <!-- 10 o'clock -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M39,45h1.5v1.5h-1.5z"/>
+    <!-- 11 o'clock -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M45,39.5h1.5v1.5h-1.5z"/>
 
     <!-- Hour hand (pointing to 8) -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M54,50L54,36L52,36L52,50L54,50Z"/>
+        android:pathData="M53.5,55L47,60L48,61.5L54,56.5L54.5,55.5Z"/>
 
-    <!-- Minute hand (pointing to 6) -->
+    <!-- Minute hand (pointing to 6/30 minutes) -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M54,50L46,45L45,47L53,52L54,50Z"/>
+        android:pathData="M53.5,55L53.5,68L54.5,68L54.5,55Z"/>
 
-    <!-- Clock center dot -->
+    <!-- Clock center dot (pink) -->
     <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M54,48.5C54.83,48.5 55.5,49.17 55.5,50C55.5,50.83 54.83,51.5 54,51.5C53.17,51.5 52.5,50.83 52.5,50C52.5,49.17 53.17,48.5 54,48.5Z"/>
+        android:fillColor="#EC4899"
+        android:pathData="M54,53.5C55.38,53.5 56.5,54.62 56.5,56C56.5,57.38 55.38,58.5 54,58.5C52.62,58.5 51.5,57.38 51.5,56C51.5,54.62 52.62,53.5 54,53.5Z"/>
 
-    <!-- Clock tick marks -->
+    <!-- Three dots at bottom -->
+    <!-- Left dot (purple) -->
     <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M54,30L54,33"/>
-    <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M54,67L54,70"/>
-    <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M38,50L35,50"/>
-    <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M73,50L76,50"/>
+        android:fillColor="#8B5CF6"
+        android:pathData="M47,86C47,87.66 45.66,89 44,89C42.34,89 41,87.66 41,86C41,84.34 42.34,83 44,83C45.66,83 47,84.34 47,86Z"/>
 
-    <!-- Double arrow symbol (conversion) -->
-    <group
-        android:translateX="76"
-        android:translateY="46">
-        <!-- Right arrow -->
-        <path
-            android:fillColor="#FFFFFF"
-            android:pathData="M0,0L6,0L6,1.5L4,1.5L4,2.5L6,2.5L6,4L0,4L0,0Z"/>
-        <path
-            android:fillColor="#FFFFFF"
-            android:pathData="M5,1.5L7,2L5,2.5Z"/>
-        <!-- Left arrow -->
-        <path
-            android:fillColor="#FFFFFF"
-            android:pathData="M6,5L0,5L0,6.5L2,6.5L2,7.5L0,7.5L0,9L6,9L6,5Z"/>
-        <path
-            android:fillColor="#FFFFFF"
-            android:pathData="M1,6.5L-1,7L1,7.5Z"/>
-    </group>
+    <!-- Middle dot (white) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M56,86C56,87.66 54.66,89 53,89C51.34,89 50,87.66 50,86C50,84.34 51.34,83 53,83C54.66,83 56,84.34 56,86Z"/>
+
+    <!-- Right dot (white) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M65,86C65,87.66 63.66,89 62,89C60.34,89 59,87.66 59,86C59,84.34 60.34,83 62,83C63.66,83 65,84.34 65,86Z"/>
+
 </vector>
